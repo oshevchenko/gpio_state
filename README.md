@@ -12,7 +12,7 @@ cd /tmp && ./untar_install.sh gpio_state
 python3 -m gpiostate 1
 ```
 
-Similar to:
+Produce the result similar to:
 ```
 gpioget gpiochip3 1
 ```
