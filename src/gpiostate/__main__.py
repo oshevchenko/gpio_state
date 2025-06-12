@@ -16,7 +16,14 @@ def main():
     factory_reset_btn = GpioPin(gpiochip = 'gpiochip3', offset=gpio_pin, inverted=True)
     state = factory_reset_btn.get_state()
 
-    print(f"GPIO pin {gpio_pin} state: {state}")
+    if state == gpiostate.GPIO_PIN_ACTIVE:
+        state = "Active"
+    elif state == gpiostate.GPIO_PIN_INACTIVE:
+        state = "Inactive"
+    else:
+        state = "Unknown"
+
+    print(f"GPIO pin {gpio_pin} state: {state}.")
 
 if __name__ == "__main__":
     main()

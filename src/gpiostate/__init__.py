@@ -1,2 +1,2 @@
-from .gpiostate import GpioPin
-__all__ = ["GpioPin"]
+from .gpiostate import GpioPin, GPIO_PIN_ACTIVE, GPIO_PIN_INACTIVE
+__all__ = ["GpioPin", "GPIO_PIN_ACTIVE", "GPIO_PIN_INACTIVE"]
